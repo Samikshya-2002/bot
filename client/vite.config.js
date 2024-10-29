@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: true,
+      // external: true,
+      input: 'index.html',
     }
   }
 })
