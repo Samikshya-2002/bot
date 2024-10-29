@@ -17,7 +17,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       setIsLoading(true); // Set loading to true when sending message
 
       // Send the user's message to the backend API
-      const response = await axios.post("http://localhost:5000/chat", {
+      // const response = await axios.post("http://localhost:5000/chat", {
+      //   query: message,
+      // });
+      const response = await axios.post(`${import.meta.env.VITE_API_URL}}/chat`, {
         query: message,
       });
       console.log("Full response from backend:", response);
