@@ -1,0 +1,46 @@
+{
+  "companyInfo": {
+    "name": "Quotus",
+    "founded": "2021",
+    "location": "Bhubaneswar",
+    "numberOfEmployees": "30-50",
+    "mission": "Provide every business a digital platform",
+    "vision": "Adding Value to Enterprises by providing innovative software products"
+  },
+  "products": [
+    {
+      "name": "Techmate",
+      "description": "Education meets Innovation",
+      "features": ["Chat", "Transpiler", "Mock interview"]
+    },
+    {
+      "name": "Tripswift",
+      "description": "Travel meets Technology",
+      "features": ["Voice assistant booking", "Real-time availability of hotels and resorts", "Easy way to book with NLP"]
+    }
+  ],
+  "partnerCompanies": [
+    {
+      "name": "Shree Jagannath Culture and Heritage",
+      "collaborationDetails": "Details about the partnership with Company A"
+    },
+    {
+      "name": "Odisha Vocal for Local",
+      "collaborationDetails": "Details about the partnership with Company B"
+    }
+  ],
+  "workCulture": {
+    "focus": "Innovation, collaboration, diversity",
+    "values": ["Value 1", "Value 2", "Value 3"]
+  },
+  "services": [
+    {
+      "name": "Cardano",
+      "description": "Description of Service A"
+    },
+    {
+      "name": "Service B",
+      "description": "Web Development"
+    }
+  ]
+}

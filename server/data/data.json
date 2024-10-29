@@ -1,0 +1,106 @@
+{
+    "companyInfo": {
+      "name": "Quotus",
+      "founded": "2021",
+      "location": "Bhubaneswar",
+      "numberOfEmployees": "30-50",
+      "mission": "provide every business a digital platform",
+      "vision": "Adding Value to Enterprises by providing innovative software products"
+    },
+    "products": [
+      {
+        "name": "Techmate",
+        "description": "Education meets Innovation",
+        "features": ["Chat", "Transpiler", "Mock interview"]
+      },
+      {
+        "name": "Tripswift",
+        "description": "Travel meets Technology",
+        "features": ["Voice assistant booking", "Rea-time availabilty of hotels and resorts", "Easy way to book with NLP"]
+      },
+      {
+        "name": "Naturopura",
+        "description": "Nature's Freshness, Delivered to Your Doorstep",
+        "features": ["Chat", "Transpiler", "Mock interview"]
+      },
+      {
+        "name": "OCR PRO",
+        "description": "Data Extraction with AI-Driven Solutions",
+        "features": ["Chat", "Transpiler", "Mock interview"]
+      },
+      {
+        "name": "Fruit Merge",
+        "description": "Delightful mix of fun and challenge",
+        "features": ["Engage your brain in some juicy puzzle-solving", "Perfect casual game", "Quick thinking and clever strategies"]
+      }
+    ],
+    "partnerCompanies": [
+      {
+        "name": "Shree Jagannath Culture and Heritage",
+        "collaborationDetails": "Details about the partnership with Company"
+      },
+      {
+        "name": "Odisha Vocal for Local",
+        "collaborationDetails": "Details about the partnership with Company"
+      },
+      {
+        "name": "eRevMax",
+        "collaborationDetails": "Details about the partnership with Company"
+      },
+      {
+        "name": "Cycleworld",
+        "collaborationDetails": "Details about the partnership with Company"
+      },
+      {
+        "name": "Bima Facts",
+        "collaborationDetails": "Details about the partnership with Company"
+      }
+    ],
+    "workCulture": {
+      "focus": "Innovation, collaboration, diversity",
+      "values": ["Growth", "Management", "Self importance"]
+    },
+    "services": [
+      {
+        "name": "Cardano",
+        "description": "Description of Service "
+      },
+      {
+        "name": "Web Development",
+        "description": "Web Development"
+      },
+      {
+        "name": "MEAN Stack",
+        "description": "Description of Service "
+      },
+      {
+        "name": "Haskell",
+        "description": "Description of Service "
+      },
+      {
+        "name": "Next Js",
+        "description": "Description of Service "
+      },
+      {
+        "name": "Blockchain",
+        "description": "Description of Service "
+      },
+      {
+        "name": "Python",
+        "description": "Description of Service "
+      },
+      {
+        "name": "AI ML",
+        "description": "Description of Service "
+      },
+      {
+        "name": "Consulting",
+        "description": "Expert advice to optimize your business operations."
+      },
+      {
+        "name": "Support",
+        "description": "24/7 assistance to ensure your systems run smoothly."
+      }
+    ]
+  }
+  
