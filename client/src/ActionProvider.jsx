@@ -20,7 +20,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       // const response = await axios.post("http://localhost:5000/chat", {
       //   query: message,
       // });
-      const response = await axios.post(`${import.meta.env.VITE_API_URL}}/chat`, {
+      const response = await axios.post(`https://bot-u87q.onrender.com/chat`, {
         query: message,
       });
       console.log("Full response from backend:", response);
