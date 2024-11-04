@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 /* Global Styles */
-body {
+/* body {
   background-color: rgb(208, 202, 214);
-}
+  background-color: transparent;
+  border: 2px solid red;
+} */
 
 @media screen and (max-width: 400px) {
   body {
@@ -26,7 +28,8 @@ body {
   margin-top: 30px;
   margin-bottom: 40px;
   position: relative;
-  border: 1px solid rgba(211, 211, 211, 0.671);
+  /* border: 1px solid rgba(211, 211, 211, 0.671); */
+  border: 1px solid red;
   background-color: white;
 }
 

@@ -28,7 +28,8 @@
 import { useState } from "react";
 import Chatbot from "react-chatbot-kit";
 import "react-chatbot-kit/build/main.css";
-import "./App.css";
+// import "./App.css";
+import "./index.css";
 import Test from "./components/Test";
 import config from "./config";
 import MessageParser from "./MessageParser";
