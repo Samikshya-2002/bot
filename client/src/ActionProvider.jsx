@@ -5,6 +5,7 @@ import questions from "./questions";
 import { FaComments, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { BiBot } from "react-icons/bi";
+import DOMPurify from "dompurify";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const [showChat, setShowChat] = useState(false);
@@ -17,12 +18,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       setIsLoading(true); // Set loading to true when sending message
 
       // Send the user's message to the backend API
-      // const response = await axios.post("http://localhost:5000/chat", {
-      //   query: message,
-      // });
-      const response = await axios.post(`https://bot-o00m.onrender.com/chat`, {
+      const response = await axios.post("http://localhost:5000/chat", {
         query: message,
       });
+      // const response = await axios.post(`https://bot-o00m.onrender.com/chat`, {
+      //   query: message,
+      // });
       console.log("Full response from backend:", response);
 
       // Extract the bot's reply from the backend response
@@ -35,12 +36,17 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           ? JSON.stringify(botReply, null, 2)
           : botReply;
 
+          // Sanitize the reply
+       const sanitizedReply = DOMPurify.sanitize(reply);
+       console.log("sanitize reply", sanitizedReply);
+
       // Add the bot's reply to the chat
       setState((prev) => ({
         ...prev,
         messages: [
           ...prev.messages.filter((msg) => !msg.loading), // Ensure any loading message is removed
-          createChatBotMessage(reply), // Add the actual bot reply
+          // createChatBotMessage(reply), // Add the actual bot reply
+          createChatBotMessage(sanitizedReply),
         ],
       }));
 
