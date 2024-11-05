@@ -45,8 +45,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         ...prev,
         messages: [
           ...prev.messages.filter((msg) => !msg.loading), // Ensure any loading message is removed
-          // createChatBotMessage(reply), // Add the actual bot reply
-          createChatBotMessage(sanitizedReply),
+          createChatBotMessage(reply), // Add the actual bot reply
+          // createChatBotMessage(sanitizedReply),
         ],
       }));
 
