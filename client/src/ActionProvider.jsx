@@ -21,7 +21,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       // const response = await axios.post("http://localhost:5000/chat", {
       //   query: message,
       // });
-      const response = await axios.post(`https://bot-qk4g.onrender.com/chat`, {
+      const response = await axios.post(`https://bot-y21c.onrender.com/chat`, {
         query: message,
       });
       console.log("Full response from backend:", response);
