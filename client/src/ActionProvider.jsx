@@ -9,21 +9,21 @@ import DOMPurify from "dompurify";
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const [showChat, setShowChat] = useState(false);
-  const [showMainContainer, setShowMainContainer] = useState(false); // for the main container (FAQs)
-  const [isLoading, setIsLoading] = useState(false); // Track loading state
+  const [showMainContainer, setShowMainContainer] = useState(false); 
+  const [isLoading, setIsLoading] = useState(false); 
 
   // Function to handle sending a message to the backend
   const handleUserMessage = async (message) => {
     try {
-      setIsLoading(true); // Set loading to true when sending message
+      setIsLoading(true); 
 
       // Send the user's message to the backend API
-      // const response = await axios.post("http://localhost:5000/chat", {
-      //   query: message,
-      // });
-      const response = await axios.post(`https://bot-y21c.onrender.com/chat`, {
+      const response = await axios.post("http://localhost:5000/chat", {
         query: message,
       });
+      // const response = await axios.post(`https://bot-y21c.onrender.com/chat`, {
+      //   query: message,
+      // });
       console.log("Full response from backend:", response);
 
       // Extract the bot's reply from the backend response
@@ -36,17 +36,62 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           ? JSON.stringify(botReply, null, 2)
           : botReply;
 
-          // Sanitize the reply
-       const sanitizedReply = DOMPurify.sanitize(reply);
-       console.log("sanitize reply", sanitizedReply);
+const makeLinksClickable = (reply) => {
+  // const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const urlRegex =/(\b(www\.[^\s]+))/g;
+  const emailRegex = /([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
+  const phoneRegex = /(\+?[0-9]{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9})/g;
+
+  const combinedRegex=new RegExp(`(${urlRegex.source}|${emailRegex.source}|${phoneRegex.source})`, "g");
+  const parts = reply.split(combinedRegex).filter(Boolean);
+
+  const seen = new Set();
+  return parts.map((part, index) => {
+    
+    // if(!part) return null;
+    if (seen.has(part)) return null; // Skip if already processed
+    seen.add(part);
+
+    if (urlRegex.test(part)) {
+      // const cleanUrl = part.replace(/[^\w\s:/.-]/g, '').trim();
+      const cleanUrl = part.replace(/[^\w\s:/.-]/g, '').replace(/\.$/, '').trim();
+      console.log("url", part.length)
+      console.log("CLEANURL: " + cleanUrl.length);
+      return(
+         <a key={index} href={cleanUrl.startsWith("http") ? cleanUrl : `https://${cleanUrl}`} target="_blank" rel="noopener noreferrer" style={{color:"blue"}} >
+          {cleanUrl}
+         </a>
+        );
+    }
+    else if (emailRegex.test(part)) {
+      return(
+         <a key={index} href={`mailto:${part}`} style={{color:"blue"}} >
+          {part}
+         </a>
+        );
+    }
+    if (phoneRegex.test(part)) {
+      const phoneNumber = part.replace(/[^\d]/g, '');
+      return(
+         <a key={index} href={`https://wa.me/${phoneNumber}`} target="_blank" rel="noopener noreferrer" style={{color:"blue"}}>
+          {part}
+         </a>
+        );
+    }
+    return part;
+  }).filter(Boolean);
+}
+
+const formattedReply = makeLinksClickable(reply);
+
 
       // Add the bot's reply to the chat
       setState((prev) => ({
         ...prev,
         messages: [
           ...prev.messages.filter((msg) => !msg.loading), // Ensure any loading message is removed
-          createChatBotMessage(reply), // Add the actual bot reply
-          // createChatBotMessage(sanitizedReply),
+          createChatBotMessage(formattedReply), // Add the actual bot reply
+          // createChatBotMessage(reply),
         ],
       }));
 

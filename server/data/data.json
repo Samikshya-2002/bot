@@ -5,7 +5,15 @@
       "location": "Bhubaneswar",
       "numberOfEmployees": "30-50",
       "mission": "provide every business a digital platform",
-      "vision": "Adding Value to Enterprises by providing innovative software products"
+      "vision": "Adding Value to Enterprises by providing innovative software products",
+      "ceo":"Mr. Narendra Das",
+      "director":"Mrs. Sagarika Parija"
+    },
+    "contactInfo": {
+      "phone": "+91-9777403555",
+      "whatsapp": "+91-9777403555",
+      "email": "info@quotus.co.in",
+      "website": "www.quotus.co.in"
     },
     "products": [
       {
@@ -35,63 +43,60 @@
       }
     ],
     "partnerCompanies": [
-      {
-        "name": "Shree Jagannath Culture and Heritage",
-        "collaborationDetails": "Details about the partnership with Company"
-      },
-      {
-        "name": "Odisha Vocal for Local",
-        "collaborationDetails": "Details about the partnership with Company"
-      },
-      {
-        "name": "eRevMax",
-        "collaborationDetails": "Details about the partnership with Company"
-      },
-      {
-        "name": "Cycleworld",
-        "collaborationDetails": "Details about the partnership with Company"
-      },
-      {
-        "name": "Bima Facts",
-        "collaborationDetails": "Details about the partnership with Company"
-      }
-    ],
+  {
+    "name": "Shree Jagannath Culture and Heritage",
+    "collaborationDetails": "Collaborating to support and promote Odisha's rich cultural heritage through digital platforms."
+  },
+  {
+    "name": "Odisha Vocal for Local",
+    "collaborationDetails": "Working together to empower local artisans and promote local products in Odisha."
+  },
+  {
+    "name": "eRevMax",
+    "collaborationDetails": "Partnering to enhance technology solutions in the hospitality and travel industries."
+  },
+  {
+    "name": "Cycleworld",
+    "collaborationDetails": "Creating digital strategies to support the cycling community and promote sustainable transportation."
+  },
+  {
+    "name": "Bima Facts",
+    "collaborationDetails": "Providing technology solutions to streamline insurance-related services and enhance customer reach."
+  }
+],
+
     "workCulture": {
       "focus": "Innovation, collaboration, diversity",
       "values": ["Growth", "Management", "Self importance"]
     },
     "services": [
       {
-        "name": "Cardano",
-        "description": "Description of Service "
-      },
-      {
         "name": "Web Development",
-        "description": "Web Development"
+        "description": "Creating scalable and responsive websites tailored to meet client requirements."
       },
       {
-        "name": "MEAN Stack",
-        "description": "Description of Service "
+        "name": "MERN Stack",
+        "description": "Building end-to-end web applications with MongoDB, Express, React, and Node.js for modern needs."
       },
       {
         "name": "Haskell",
-        "description": "Description of Service "
+        "description": "Building fast, SEO-optimized web apps using Next.js for an enhanced user experience."
       },
       {
         "name": "Next Js",
-        "description": "Description of Service "
+        "description": "Building fast, SEO-optimized web apps using Next.js for an enhanced user experience."
       },
       {
         "name": "Blockchain",
-        "description": "Description of Service "
+        "description": "Delivering secure and transparent solutions using blockchain for decentralized applications."
       },
       {
         "name": "Python",
-        "description": "Description of Service "
+        "description": "Automating processes and analyzing data with Python for business insights and solutions."
       },
       {
         "name": "AI ML",
-        "description": "Description of Service "
+        "description": "Applying AI and ML techniques to build predictive models and intelligent systems."
       },
       {
         "name": "Consulting",
@@ -101,6 +106,16 @@
         "name": "Support",
         "description": "24/7 assistance to ensure your systems run smoothly."
       }
+    ],
+    "internationalClients": {
+    "countries": [
+      "United States",
+      "United Kingdom",
+      "Canada",
+      "Australia",
+      "Europe",
+      "India"
     ]
+  }
   }
   
