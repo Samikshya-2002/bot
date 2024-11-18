@@ -18,12 +18,12 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       setIsLoading(true); 
 
       // Send the user's message to the backend API
-      const response = await axios.post("http://localhost:5000/chat", {
-        query: message,
-      });
-      // const response = await axios.post(`https://bot-y21c.onrender.com/chat`, {
+      // const response = await axios.post("http://localhost:5000/chat", {
       //   query: message,
       // });
+      const response = await axios.post(`https://bot-u1gk.onrender.com/chat`, {
+        query: message,
+      });
       console.log("Full response from backend:", response);
 
       // Extract the bot's reply from the backend response
